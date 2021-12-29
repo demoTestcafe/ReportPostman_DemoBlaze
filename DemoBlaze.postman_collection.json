@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "e037c8cd-8c25-4ac0-882d-9b93a3b06e39",
+		"name": "DemoBlaze",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demoblaze.com",
+					"protocol": "https",
+					"host": [
+						"demoblaze",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.demoblaze.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.demoblaze.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.demoblaze.com/"
+					},
+					{
+						"key": "accept-language",
+						"value": "es-419,es;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"{{userName}}\",\"password\":\"QWxhbg==\"}"
+				},
+				"url": {
+					"raw": "https://api.demoblaze.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"demoblaze",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addtocart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.demoblaze.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.demoblaze.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.demoblaze.com/"
+					},
+					{
+						"key": "accept-language",
+						"value": "es-419,es;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"461487be-db78-980c-d22e-61cd0e1d54de\",\"cookie\":\"QWxhbjEyMzE2NDEzMTc=\",\"prod_id\":8,\"flag\":true}"
+				},
+				"url": {
+					"raw": "https://api.demoblaze.com/addtocart",
+					"protocol": "https",
+					"host": [
+						"api",
+						"demoblaze",
+						"com"
+					],
+					"path": [
+						"addtocart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewcart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"if(pm.response.status == \"OK\") {\r",
+							"    pm.test(\"Validar cookies con username correcto\", function () {\r",
+							"         var jsonData = pm.response.json(); \r",
+							"        pm.expect(jsonData.Items[0].cookie).to.eql(pm.environment.get(\"userName\"));   \r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.demoblaze.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.demoblaze.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.demoblaze.com/"
+					},
+					{
+						"key": "accept-language",
+						"value": "es-419,es;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cookie\":\"QWxhbjEyMzE2NDEzMTc=\",\"flag\":true}"
+				},
+				"url": {
+					"raw": "https://api.demoblaze.com/viewcart",
+					"protocol": "https",
+					"host": [
+						"api",
+						"demoblaze",
+						"com"
+					],
+					"path": [
+						"viewcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteitem",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.demoblaze.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.demoblaze.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.demoblaze.com/"
+					},
+					{
+						"key": "accept-language",
+						"value": "es-419,es;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"3738c49a-1555-1961-2f01-33025572063d\"}"
+				},
+				"url": {
+					"raw": "https://api.demoblaze.com/deleteitem",
+					"protocol": "https",
+					"host": [
+						"api",
+						"demoblaze",
+						"com"
+					],
+					"path": [
+						"deleteitem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "entries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.demoblaze.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.demoblaze.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.demoblaze.com/"
+					},
+					{
+						"key": "accept-language",
+						"value": "es-419,es;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://api.demoblaze.com/entries",
+					"protocol": "https",
+					"host": [
+						"api",
+						"demoblaze",
+						"com"
+					],
+					"path": [
+						"entries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
